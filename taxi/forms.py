@@ -39,7 +39,7 @@ class CarCreationForm(forms.ModelForm):
         if commit:
             car.save()
             self.save_m2m()
-        car.drivers.set(self.cleaned_data["assigned_drivers"])
+            car.drivers.set(self.cleaned_data["assigned_drivers"])
 
         return car
 
